@@ -14,8 +14,8 @@ namespace MyGame
         // Construtor (same name as class)
         public Enemy(string name)
         {
-            this.name=name; // Porque razao usamos "this", like self in python?
-            
+            //this.name=name; // Porque razao usamos "this", like self in python?
+            SetName(name);
             health =100;
             shield = 0;
         }
@@ -55,7 +55,7 @@ namespace MyGame
             if (newname.Length > 8)
             {
                 int maxLength = 8;
-                string limitedString = new string(newname.Take(maxLength).ToArray());
+                name = new string(newname.Take(maxLength).ToArray());
             }
             else
             {
