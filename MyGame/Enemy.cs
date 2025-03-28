@@ -16,9 +16,12 @@ namespace MyGame
         {
             //this.name=name; // Porque razao usamos "this", like self in python?
             SetName(name);
-            health =100;
-            shield = 0;
+            //health =100;
+            //shield = 0;
+            health = starthealth;
+            shield = starthealth;
         }
+        
 
         //Different Names from class
         public string GetName()
@@ -50,7 +53,7 @@ namespace MyGame
             }
         }
        
-       private void SetName(string newname)
+       public void SetName(string newname)
        {
             if (newname.Length > 8)
             {
@@ -63,7 +66,17 @@ namespace MyGame
             }
        }
 
-        
+       //Encapsulação
+        public enum PowerUp()
+        {
+            Health;
+            Shield;
+        }
+
+        public void PickupPowerUp()
+        {
+            
+        }
 
     }
 }
