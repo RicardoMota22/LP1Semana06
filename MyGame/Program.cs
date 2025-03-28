@@ -41,6 +41,8 @@ namespace MyGame
                 Console.WriteLine($"{name.GetName()} {name.GetHealth()} {name.GetShield()} ");
             }
 
+            Console.WriteLine($"PowerUps Collected : {Enemy.GetPowerUps()}");
+
 
         }
     }
