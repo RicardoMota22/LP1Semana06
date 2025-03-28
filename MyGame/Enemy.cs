@@ -17,6 +17,8 @@ namespace MyGame
         private float health;
         private float shield;
 
+        private static int powerUpsCollected;
+
         // Construtor (same name as class)
         public Enemy(string name, float startHealth = 100, float startShield = 0)
         {
@@ -27,6 +29,17 @@ namespace MyGame
             health = startHealth;
             shield = startShield;
         }
+        //static 
+        
+        public static int GetPowerUps()
+        {
+            return powerUpsCollected;
+        }
+        //static 
+        static Enemy()
+        {
+            powerUpsCollected = 0;
+        }
         
 
         //Different Names from class
@@ -35,7 +48,7 @@ namespace MyGame
             return name;
         }
 
-         public float GetHealth()
+        public float GetHealth()
         {
             return health;
         }
@@ -92,6 +105,9 @@ namespace MyGame
                     shield = 100;
                 }
             }
+
+            //Increment static
+            powerUpsCollected++; //adds 
 
 
         }
