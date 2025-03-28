@@ -86,7 +86,7 @@ namespace MyGame
 
             if (powerUp == PowerUp.Shield)
             {
-                health = shield + value;
+                shield = shield + value;
                 if (shield > 100)
                 {
                     shield = 100;
