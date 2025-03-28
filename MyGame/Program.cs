@@ -33,12 +33,13 @@ namespace MyGame
             array[0].PickupPowerUp(PowerUp.Health, 20);
             array[0].PickupPowerUp(PowerUp.Shield, 30);
             array[1].TakeDamage(40);
+            //array[2].TakeDamage(30);
 
             
             foreach (Enemy name in array)
             {
                 
-                Console.WriteLine($"{name.GetName()} {name.GetHealth()} {name.GetShield()} ");
+                Console.WriteLine($"{name.GetName()} {name.GetHealth()} {name.GetShield()}");
             }
 
             Console.WriteLine($"PowerUps Collected : {Enemy.GetPowerUps()}");

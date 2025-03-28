@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 namespace MyGame
 {
     //Encapsulação + Enumeração
-        public enum PowerUp
-        {
-            Health,
-            Shield
-        }
+    
+    public enum PowerUp
+    {
+        Health,
+        Shield
+    }
     public class Enemy
     {
         private string name;
         private float health;
         private float shield;
-
         private static int powerUpsCollected;
 
         // Construtor (same name as class)
@@ -29,7 +29,7 @@ namespace MyGame
             health = startHealth;
             shield = startShield;
         }
-        //static 
+         
         
         public static int GetPowerUps()
         {
@@ -86,7 +86,7 @@ namespace MyGame
        }
 
 
-        public void PickupPowerUp(PowerUp powerUp ,float value)
+        public void PickupPowerUp(PowerUp powerUp, float value)
         {
             if (powerUp == PowerUp.Health)
             {
