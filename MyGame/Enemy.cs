@@ -50,7 +50,7 @@ namespace MyGame
             }
         }
        
-       public void SetName(string newname)
+       private void SetName(string newname)
        {
             if (newname.Length > 8)
             {
