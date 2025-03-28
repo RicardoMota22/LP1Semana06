@@ -5,6 +5,12 @@ using System.Threading.Tasks;
 
 namespace MyGame
 {
+    //Encapsulação + Enumeração
+        public enum PowerUp
+        {
+            Health,
+            Shield
+        }
     public class Enemy
     {
         private string name;
@@ -12,14 +18,14 @@ namespace MyGame
         private float shield;
 
         // Construtor (same name as class)
-        public Enemy(string name)
+        public Enemy(string name, float startHealth = 100, float startShield = 0)
         {
             //this.name=name; // Porque razao usamos "this", like self in python?
             SetName(name);
             //health =100;
             //shield = 0;
-            health = starthealth;
-            shield = starthealth;
+            health = startHealth;
+            shield = startShield;
         }
         
 
@@ -66,16 +72,28 @@ namespace MyGame
             }
        }
 
-       //Encapsulação
-        public enum PowerUp()
-        {
-            Health;
-            Shield;
-        }
 
-        public void PickupPowerUp()
+        public void PickupPowerUp(PowerUp powerUp ,float value)
         {
-            
+            if (powerUp == PowerUp.Health)
+            {
+                health = health + value;
+                if (health > 100)
+                {
+                    health = 100;
+                }
+            }
+
+            if (powerUp == PowerUp.Shield)
+            {
+                health = shield + value;
+                if (shield > 100)
+                {
+                    shield = 100;
+                }
+            }
+
+
         }
 
     }
